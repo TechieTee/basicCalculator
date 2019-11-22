@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/calc.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+        <div class=""><center><h3>Just input a numer in the first box and another in the second box, and click the generate button,</br> it gives you a multiplication table from the number in box1 to the number in box2 </h3></center></div>
+    <div class="one">
+      <textarea name="box1" id="box1" cols="15" rows="5"></textarea>
+    </div>
+
+    <div class="two">
+      <textarea name="box2" id="box2" cols="15" rows="5"></textarea>
+    </div>
+    <div class="generate">
+      <button type="button" id="generate" onclick="generate()">Generate</button>
+    </div>
+    <div class="ans" id="ans"></div>
+
+    <script>
+ 
+      function generate() {
+        var input1 = document.getElementById("box1").value;
+        var num1 = parseInt(input1);
+        var input2 = document.getElementById("box2").value;
+        var num2 = parseInt(input2);
+        for (let a = num1; a <= num2; a++) {
+          //  a *
+    
+          //document.getElementById("ans").innerHTML += a + "</br>";
+
+          for (let mul = 1; mul <= 12; mul++) {
+            document.getElementById("ans").innerHTML +=
+              a + " * " + mul + " = " + a * mul + "</br>";
+              console.log(0)
+          }
+        
+          // document.getElementById("ans").innerHTML += a + "</br>";
+        }
+      }
+
+      //  var timesTable = prompt("pease enter any number");
+      //   for (var a = 1; a <= 12; a++) {
+      //     document.write(
+      //       timesTable + " * " + a + " = " + a * timesTable + "<br/>"
+      //     ) ;
+      //   }
+      //   document.getElementById("ans").innerHTML = "";
+      //   function generate() {
+      //     var input1 = document.getElementById("box1").value;
+      //     var num1 = parseInt(input1);
+      //     var input2 = document.getElementById("box2").value;
+      //     var num2 = parseInt(input2);
+      //     var result = document.getElementById("ans");
+      //     for (var x = num1; x <= num2; x++) {
+      //       for (var a = 1; a <= 12; a++) {
+      //         var ans = num1 + " * " + a + " = " + a * num1 + "<br/>";
+      //         for (let y = ans; y <= num2; y++) {
+      //           document.getElementById("ans").innerHTML += y;
+      //         }
+      // document.getElementById("ans").innerHTML += ans;
+      // }
+
+      // document.getElementById("ans").innerHTML += x;
+      //  }
+      //  }
+    </script>
+  </body>
+</html>
